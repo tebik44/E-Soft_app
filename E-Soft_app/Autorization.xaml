@@ -1,0 +1,28 @@
+﻿<Page x:Class="E_Soft_app.Autorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:E_Soft_app"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Autorization">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1">
+            <TextBlock Text="Авторизация"  Padding="25" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FF243238" FontSize="14" FontWeight="Bold" FontFamily="Candara"></TextBlock>
+            <TextBlock Text="Введите логин" Foreground="#FF243238" FontFamily="Candara"></TextBlock>
+            <TextBox x:Name="login_box"></TextBox>
+            <TextBlock Text="Введите пароль" Foreground="#FF243238" FontFamily="Candara"></TextBlock>
+            <PasswordBox x:Name="password_box"></PasswordBox>
+            <!--<TextBox x:Name="password_box"></TextBox>-->
+            <Button x:Name="login_button" Content="Войти" Background="#FFFFF6A5" Margin="0,5" FontSize="14" Foreground="#FF243238" FontFamily="Candara" Click="login_button_Click"></Button>
+            <Button Content="Регистрация" Background="#6BFF18"  FontSize="14" Foreground="#FF243238" FontFamily="Candara" Click="Button_Click_Registration"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

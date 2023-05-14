@@ -15,14 +15,47 @@
         </Grid.RowDefinitions>
 
         <StackPanel HorizontalAlignment="Center"  Grid.Row="1">
-            <TextBlock Text="Авторизация"  Padding="25" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FF243238" FontSize="14" FontWeight="Bold" FontFamily="Candara"></TextBlock>
+            <TextBlock FontFamily="Comic Sans MS" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Поле логина"  VerticalAlignment="Top" Height="17">
+            </TextBlock>
+            <TextBox x:Name="login_box" BorderBrush="Firebrick" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" AutomationProperties.HelpText="сюда логин, гав!">
+                <TextBox.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="1" BorderBrush="#FF498C51">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <TextBlock HorizontalAlignment="Center" FontFamily="Comic Sans MS" TextWrapping="Wrap" Text="Поле пароля"  VerticalAlignment="Top" Width="78" Height="16"></TextBlock>
+            <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" MinWidth="100" Height="22">
+                <PasswordBox.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="1" BorderBrush="#FF498C51">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </PasswordBox.Template>
+            </PasswordBox>
+            <!--<TextBlock Text="Авторизация"  Padding="25" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FF243238" FontSize="14" FontWeight="Bold" FontFamily="Candara"></TextBlock>
             <TextBlock Text="Введите логин" Foreground="#FF243238" FontFamily="Candara"></TextBlock>
             <TextBox x:Name="login_box"></TextBox>
             <TextBlock Text="Введите пароль" Foreground="#FF243238" FontFamily="Candara"></TextBlock>
-            <PasswordBox x:Name="password_box"></PasswordBox>
+            <PasswordBox x:Name="password_box"></PasswordBox>-->
             <!--<TextBox x:Name="password_box"></TextBox>-->
-            <Button x:Name="login_button" Content="Войти" Background="#FFFFF6A5" Margin="0,5" FontSize="14" Foreground="#FF243238" FontFamily="Candara" Click="login_button_Click"></Button>
-            <Button Content="Регистрация" Background="#6BFF18"  FontSize="14" Foreground="#FF243238" FontFamily="Candara" Click="Button_Click_Registration"></Button>
+            <Button x:Name="login_button" Content="Войти" Background="#FFFFF6A5" Margin="0,5" FontSize="14" Foreground="#FF243238" FontFamily="Candara" Click="login_button_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Регистрация" Background="#6BFF18"  FontSize="14" Foreground="#FF243238" FontFamily="Candara" Click="Button_Click_Registration">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -31,7 +31,7 @@ namespace E_Soft_app
         {
             try
             {
-                var userObj = AppConnect.dataBase_For_App.user_.FirstOrDefault(x => x.login == login_box.Text && x.password == password_box.Password);
+                var userObj = AppConnect.dataBas_test.user_.FirstOrDefault(x => x.login == login_box.Text && x.password == password_box.Password);
                 if (userObj == null)
                 {
                     MessageBox.Show("Пользователель не найден", "ошибка авторизации 304");
@@ -46,6 +46,7 @@ namespace E_Soft_app
                             break;
                         case 2:
                             MessageBox.Show("Вход успешен, Пользователь" + userObj.name);
+                            NavigationService.Navigate(new PageAccountStudent());
                             break;
                         default:
                             MessageBox.Show("Ошибка");

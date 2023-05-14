@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -109,7 +110,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageAdmin\PageAccountStudent.xaml">
+    <Page Include="PageStudent\PageAccountStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,7 +124,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageAdmin\PageAccountStudent.xaml.cs">
+    <Compile Include="PageStudent\PageAccountStudent.xaml.cs">
       <DependentUpon>PageAccountStudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageAdmin\PageMenuAdmin.xaml.cs">
@@ -166,6 +167,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\logo.png" />
     <Content Include="ApplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -176,15 +178,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\icon.ico" />
     <Content Include="Resources\SQL_sqript-app\add and insert.sql" />
     <Content Include="Resources\SQL_sqript-app\scipts_generate.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PageStudent\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

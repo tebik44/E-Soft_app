@@ -11,8 +11,18 @@
             <RowDefinition Height="85*"/>
             <RowDefinition Height="334*"/>
         </Grid.RowDefinitions>
-        <Image Source="Resources/logo.png" Grid.Row="0"></Image>
-        <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" Grid.Row="0" Margin="40 ,0,550,0"></TextBlock>
-        <Frame x:Name="FrameMain" NavigationUIVisibility="Hidden" Grid.Row="1"></Frame>
+        <Border Grid.Column="0" Grid.Row="0" Background="#FF76E383" Grid.ColumnSpan="3"></Border>
+        <TextBlock TextAlignment="Center" FontFamily="Comic Sans MS" HorizontalAlignment="Left" TextWrapping="Wrap" Text="КУСЬ!" FontSize="34" VerticalAlignment="Top" Width="126" Height="56" Margin="84,7,0,0" RenderTransformOrigin="0.224,0.488"/>
+        <TextBlock TextAlignment="Center" Grid.Column="0" FontFamily="Comic Sans MS" HorizontalAlignment="Center" Margin="0,18,0,0" TextWrapping="Wrap" Text="Магазин Товары для животных" VerticalAlignment="Top" Width="150" Height="33"/>
+        <Image Source="Resources/logo.png" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Width="105"></Image>
+        <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" Grid.Column="0" Grid.Row="0" Margin="93,63,590,4"/>
+        <Frame Name="FrameMain" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Button Content="Выход" Click="Button_Click" FontSize="30" HorizontalAlignment="Left" Margin="606,13,0,0" VerticalAlignment="Top" Height="53" Width="149" Background="Pink" Opacity="0.9">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

@@ -49,7 +49,7 @@ namespace E_Soft_app
 
         private void add_button_Click(object sender, RoutedEventArgs e)
         {
-            if (AppConnect.dataBase_For_App.user_.Count(x => x.login == add_login_text_box.Text) > 0)
+            if (AppConnect.dataBas_test.user_.Count(x => x.login == add_login_text_box.Text) > 0)
             {
                 MessageBox.Show("Пользователь с таким логином уже существует!");
                 return;
@@ -63,8 +63,8 @@ namespace E_Soft_app
                     password = add_password_text_box.Text,
                     name = add_name_text_box.Text
                 };
-                AppConnect.dataBase_For_App.user_.Add(userObj);
-                AppConnect.dataBase_For_App.SaveChanges();
+                AppConnect.dataBas_test.user_.Add(userObj);
+                AppConnect.dataBas_test.SaveChanges();
                 MessageBox.Show("Данные успешно добавлены!");
             }
             catch (Exception ex)
@@ -84,6 +84,12 @@ namespace E_Soft_app
         {
             add_button.IsEnabled = true;
             role_count = 2;
+        }
+
+        private void RadioButton_Checked_Manager(object sender, RoutedEventArgs e)
+        {
+            add_button.IsEnabled = true;
+            role_count = 3;
         }
     }
 }

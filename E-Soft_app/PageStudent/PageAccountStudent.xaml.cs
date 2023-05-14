@@ -23,6 +23,8 @@ namespace E_Soft_app.PageAdmin
         public PageAccountStudent()
         {
             InitializeComponent();
+            
+            //UserList.ItemsSource = Data.MurashkinDB2Entities.GetContext().Users.ToList();
         }
     }
 }

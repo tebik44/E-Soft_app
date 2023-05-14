@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace E_Soft_app
 {
     /// <summary>
@@ -26,7 +27,12 @@ namespace E_Soft_app
             InitializeComponent();
             FrameMain.Content = new Autorization();
             /*FrameMain.Navigate(new Autorization());*/
-            AppConnect.dataBase_For_App = new DataBase_for_AppEntities();
+            AppConnect.dataBas_test = new DataBase_for_AppEntities();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FrameMain.Content = new Autorization();
         }
     }
 }

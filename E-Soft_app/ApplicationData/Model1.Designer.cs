@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\on_the_flash_disk\E-Soft_app\E-Soft_app\ApplicationData\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\BackUp_flash_disk\задание приложение\E-Soft_app\E-Soft_app\ApplicationData\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

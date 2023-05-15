@@ -94,13 +94,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationData\role_.cs">
+    <Compile Include="ApplicationData\Role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationData\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ApplicationData\user_.cs">
+    <Compile Include="ApplicationData\User_.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Autorization.xaml.cs">
@@ -168,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\icon.ico" />
     <Content Include="ApplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -178,7 +176,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\icon.ico" />
     <Content Include="Resources\SQL_sqript-app\add and insert.sql" />
     <Content Include="Resources\SQL_sqript-app\scipts_generate.sql" />
   </ItemGroup>

@@ -12,14 +12,16 @@ namespace E_Soft_app.ApplicationData
     using System;
     using System.Collections.Generic;
     
-    public partial class user_
+    public partial class User_
     {
-        public int id { get; set; }
-        public int id_role { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
-        public string name { get; set; }
+        public int UserID { get; set; }
+        public string UserSurname { get; set; }
+        public string UserName { get; set; }
+        public string UserPatronymic { get; set; }
+        public string UserLogin { get; set; }
+        public string UserPassword { get; set; }
+        public int UserRole { get; set; }
     
-        public virtual role_ role_ { get; set; }
+        public virtual Role Role { get; set; }
     }
 }

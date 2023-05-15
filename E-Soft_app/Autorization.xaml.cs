@@ -31,21 +31,21 @@ namespace E_Soft_app
         {
             try
             {
-                var userObj = AppConnect.dataBas_test.user_.FirstOrDefault(x => x.login == login_box.Text && x.password == password_box.Password);
+                var userObj = AppConnect.dataBas_test.User_.FirstOrDefault(x => x.UserLogin == login_box.Text && x.UserPassword == password_box.Password);
                 if (userObj == null)
                 {
-                    MessageBox.Show("Пользователель не найден", "ошибка авторизации 304");
+                    MessageBox.Show("Пользователель не найден ", "ошибка авторизации 304 ");
                 }
                 else
                 {
-                    switch (userObj.id_role)
+                    switch (userObj.UserRole)
                     {
                         case 1: 
-                            MessageBox.Show("Вход успешен, Администратор" + userObj.name);
+                            MessageBox.Show("Вход успешен, Администратор " + userObj.UserSurname + userObj.UserName);
                             NavigationService.Navigate(new PageMenuAdmin());
                             break;
                         case 2:
-                            MessageBox.Show("Вход успешен, Пользователь" + userObj.name);
+                            MessageBox.Show("Вход успешен, Пользователь " + userObj.UserSurname + userObj.UserName);
                             NavigationService.Navigate(new PageAccountStudent());
                             break;
                         default:

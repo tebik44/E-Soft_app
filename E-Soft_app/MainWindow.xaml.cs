@@ -27,7 +27,7 @@ namespace E_Soft_app
             InitializeComponent();
             FrameMain.Content = new Autorization();
             /*FrameMain.Navigate(new Autorization());*/
-            AppConnect.dataBas_test = new DataBase_for_AppEntities();
+            AppConnect.dataBas_test = new tradeEntities();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -7,16 +7,24 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageMenuAdmin">
-
     <Grid>
-        <StackPanel HorizontalAlignment="Center">
-            <Button Content="Добавить сутдента" Height="30" Margin="0,5,0,5" Background="LightSteelBlue"></Button>
-            <Button Content="Добавить оценку" Margin="0,5,0,5" Height="30" Background="LightSteelBlue"></Button>
-            <Button Content="Список студентов" Margin="0,5,0,5" Height="30" Background="LightSteelBlue"></Button>
-            <Button Content="Редактирование оценки" Margin="0,5,0,5" Height="30" Background="LightSteelBlue"></Button>
-            <Button Content="Удалить студента" Margin="0,5,0,5" Height="30" Background="LightSteelBlue"></Button>
-            <Button x:Name="exit_button" Content="Выход" Margin="0,5,0,5" Height="30" Background="LightSteelBlue" Click="exit_button_Click"></Button>
-
+        <StackPanel>
+            <Grid>
+                <StackPanel>
+                    <DataGrid IsReadOnly="True" Name="UserList" Height="300" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="UserId" Width="1*" Binding="{Binding UserId}"/>
+                            <DataGridTextColumn Header="UserSurname" Width="1*" Binding="{Binding UserSurname}"/>
+                            <DataGridTextColumn Header="UserName" Width="1*" Binding="{Binding UserName}"/>
+                            <DataGridTextColumn Header="UserPatronymic" Width="1*" Binding="{Binding UserPatronymic}"/>
+                            <DataGridTextColumn Header="UserLogin" Width="1*" Binding="{Binding UserLogin}"/>
+                            <DataGridTextColumn Header="UserPassword" Width="1*" Binding="{Binding UserPassword}"/>
+                            <DataGridTextColumn Header="UserRole" Width="1*" Binding="{Binding UserRole}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!--<Button Click="Ok_OnClick" Content="Ok"/>-->
+                </StackPanel>
+            </Grid>
         </StackPanel>
     </Grid>
 </Page>

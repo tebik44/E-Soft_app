@@ -49,21 +49,23 @@ namespace E_Soft_app
 
         private void add_button_Click(object sender, RoutedEventArgs e)
         {
-            if (AppConnect.dataBas_test.user_.Count(x => x.login == add_login_text_box.Text) > 0)
+            if (AppConnect.dataBas_test.User_.Count(x => x.UserLogin == add_login_text_box.Text) > 0)
             {
                 MessageBox.Show("Пользователь с таким логином уже существует!");
                 return;
             }
             try
             {
-                user_ userObj = new user_()
+                User_ userObj = new User_()
                 {
-                    id_role = role_count,
-                    login = add_login_text_box.Text,
-                    password = add_password_text_box.Text,
-                    name = add_name_text_box.Text
+                    UserSurname = add_surname_text_box.Text,
+                    UserName = add_name_text_box.Text,
+                    UserPatronymic = add_patronymic_text_box.Text,
+                    UserLogin = add_login_text_box.Text,
+                    UserPassword = add_password_text_box.Text,
+                    UserRole = role_count
                 };
-                AppConnect.dataBas_test.user_.Add(userObj);
+                AppConnect.dataBas_test.User_.Add(userObj);
                 AppConnect.dataBas_test.SaveChanges();
                 MessageBox.Show("Данные успешно добавлены!");
             }

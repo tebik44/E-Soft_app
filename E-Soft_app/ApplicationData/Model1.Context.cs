@@ -13,20 +13,28 @@ namespace E_Soft_app.ApplicationData
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataBase_for_AppEntities : DbContext
+    public partial class tradeEntities : DbContext
     {
-        public DataBase_for_AppEntities()
-            : base("name=DataBase_for_AppEntities")
+        public static tradeEntities _context;
+        public tradeEntities()
+            : base("name=tradeEntities")
         {
         }
-    
+
+        public static tradeEntities GetContext()
+        {
+            if (_context == null)
+                _context = new tradeEntities();
+            return _context;
+        }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<role_> role_ { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<user_> user_ { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<User_> User_ { get; set; }
     }
 }

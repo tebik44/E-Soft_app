@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Soft_app.ApplicationData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,9 @@ namespace E_Soft_app.PageAdmin
         public PageMenuAdmin()
         {
             InitializeComponent();
-        }
-
-        private void exit_button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.GoBack();
+            UserList.ItemsSource = tradeEntities.GetContext().User_.ToList();
+            //UserList.ItemsSource = userObj;
+            //UserList.ItemsSource = Data.MurashkinDB2Entities.GetContext().Users.ToList();
         }
     }
 }

@@ -79,6 +79,15 @@
     </Compile>
     <Compile Include="ApplicationData\AppConnect.cs" />
     <Compile Include="ApplicationData\AppFrame.cs" />
+    <Compile Include="ApplicationData\Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Maker.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\MeasureUnit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationData\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,7 +103,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationData\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ProductName.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationData\Role.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ApplicationData\User_.cs">
@@ -107,10 +128,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageStudent\PageAccountStudent.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PageAdmin\PageMenuAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,16 +136,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageUser\PageMenuUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageStudent\PageAccountStudent.xaml.cs">
-      <DependentUpon>PageAccountStudent.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PageAdmin\PageMenuAdmin.xaml.cs">
       <DependentUpon>PageMenuAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageCreateAcc.xaml.cs">
       <DependentUpon>PageCreateAcc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageUser\PageMenuUser.xaml.cs">
+      <DependentUpon>PageMenuUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -164,8 +185,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="T432F4.jpg" />
+    <Resource Include="Y324F4.jpg" />
+    <Resource Include="А112Т4.png" />
     <Resource Include="Resources\logo.png" />
     <Resource Include="Resources\icon.ico" />
+    <Resource Include="E345R4.jpg" />
+    <Resource Include="E431R5.png" />
+    <Resource Include="E532Q5.jpg" />
+    <Resource Include="F432F4.jpg" />
+    <Resource Include="G345E4.jpg" />
+    <Resource Include="G453T5.jpg" />
+    <Resource Include="R356F4.jpg" />
     <Content Include="ApplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

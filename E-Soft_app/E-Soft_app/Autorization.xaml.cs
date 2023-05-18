@@ -1,5 +1,6 @@
 ﻿using E_Soft_app.ApplicationData;
 using E_Soft_app.PageAdmin;
+using E_Soft_app.PageUser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,12 +42,16 @@ namespace E_Soft_app
                     switch (userObj.UserRole)
                     {
                         case 1: 
-                            MessageBox.Show("Вход успешен, Администратор " + userObj.UserSurname + userObj.UserName);
+                            MessageBox.Show("Вход успешен, Администратор " + userObj.UserSurname + ' ' + userObj.UserName);
                             NavigationService.Navigate(new PageMenuAdmin());
                             break;
                         case 2:
-                            MessageBox.Show("Вход успешен, Пользователь " + userObj.UserSurname + userObj.UserName);
-                            NavigationService.Navigate(new PageAccountStudent());
+                            MessageBox.Show("Вход успешен, Пользователь " + userObj.UserSurname + ' ' + userObj.UserName);
+                            NavigationService.Navigate(new PageMenuUser());
+                            break;
+                        case 3:
+                            MessageBox.Show("Вход успешен, Пользователь " + userObj.UserSurname + ' ' + userObj.UserName);
+                            NavigationService.Navigate(new PageMenuUser());
                             break;
                         default:
                             MessageBox.Show("Ошибка");

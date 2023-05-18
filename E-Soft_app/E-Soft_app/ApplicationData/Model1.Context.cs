@@ -15,12 +15,17 @@ namespace E_Soft_app.ApplicationData
     
     public partial class tradeEntities : DbContext
     {
-        public static tradeEntities _context;
         public tradeEntities()
             : base("name=tradeEntities")
         {
         }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
 
+        public static tradeEntities _context;
         public static tradeEntities GetContext()
         {
             if (_context == null)
@@ -28,13 +33,14 @@ namespace E_Soft_app.ApplicationData
             return _context;
         }
 
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Maker> Maker { get; set; }
+        public virtual DbSet<MeasureUnit> MeasureUnit { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductName> ProductName { get; set; }
         public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<Supplier> Supplier { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User_> User_ { get; set; }
     }
 }

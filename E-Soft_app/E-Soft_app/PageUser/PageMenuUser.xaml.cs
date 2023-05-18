@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Soft_app.ApplicationData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,18 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace E_Soft_app.PageAdmin
+namespace E_Soft_app.PageUser
 {
     /// <summary>
-    /// Interaction logic for PageAccountStudent.xaml
+    /// Interaction logic for PageUser.xaml
     /// </summary>
-    public partial class PageAccountStudent : Page
+    public partial class PageMenuUser : Page
     {
-        public PageAccountStudent()
+        public PageMenuUser()
         {
             InitializeComponent();
-            
-            //UserList.ItemsSource = Data.MurashkinDB2Entities.GetContext().Users.ToList();
+            UserList.ItemsSource = tradeEntities.GetContext().Product.ToList();
         }
     }
 }

@@ -24,9 +24,7 @@ namespace E_Soft_app.PageAdmin
         public PageMenuAdmin()
         {
             InitializeComponent();
-            UserList.ItemsSource = tradeEntities.GetContext().User_.ToList();
-            //UserList.ItemsSource = userObj;
-            //UserList.ItemsSource = Data.MurashkinDB2Entities.GetContext().Users.ToList();
+            AdminList.ItemsSource = tradeEntities.GetContext().User_.ToList();
         }
     }
 }
